@@ -1,0 +1,898 @@
+/* ------------------ RESET ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #ffdbdb, #f0f0f5);
+    min-height: 100vh;
+}
+
+/* Logo Fix */
+.logo img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ------------------ NAVBAR ------------------ */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 14px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(35px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 1000;
+    border-radius: 0 0 20px 20px;
+}
+
+
+nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1c1c1e;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 1;
+    color: #0a84ff; /* iOS blue */
+}
+
+/* ------------------ HERO SECTION ------------------ */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+
+    background: 
+        radial-gradient(circle at top left, rgba(255,255,255,0.5), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(200,220,255,0.4), transparent 70%);
+}
+
+.hero-text h3 {
+    color: #e69704;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.hero-text h1 {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    max-width: 450px;
+    color: #6f6f73;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* iOS BUTTONS */
+.hero-buttons a {
+    padding: 12px 22px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 12px;
+    transition: 0.25s ease;
+}
+
+.more {
+    background: #0a84ff;
+    color: white;
+}
+
+.more:hover {
+    background: #006de1;
+}
+
+.cv {
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.5);
+    color: #1c1c1e;
+}
+
+.cv:hover {
+    background: rgba(255,255,255,0.7);
+}
+
+/* ------------------ ABOUT SECTION (iOS liquid glass) ------------------ */
+.about {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 30px;
+}
+
+.about-text {
+    max-width: 780px;
+    padding: 45px;
+    border-radius: 32px;
+
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(45px) saturate(180%);
+    border: 1px solid rgba(255,255,255,0.4);
+
+    box-shadow: 0 25px 60px rgba(0,0,0,0.12),
+                inset 0 1px 0 rgba(255,255,255,0.7);
+
+    animation: float 6s ease-in-out infinite alternate;
+}
+
+.about-text h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #6f6f73;
+    line-height: 1.6;
+}
+
+/* Liquid glass floating effect */
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-14px); }
+}
+
+.theme-toggle {
+    margin-left: 20px;
+}
+
+.theme-toggle input {
+    display: none;
+}
+
+.theme-toggle label {
+    width: 55px;
+    height: 28px;
+    background: rgba(255,255,255,0.6);
+    display: block;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.theme-toggle label:after {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: 0.3s ease;
+}
+
+#switch:checked + label {
+    background: rgba(0,0,0,0.6);
+}
+
+#switch:checked + label:after {
+    left: 30px;
+    background: #0a84ff;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #1c1c1e, #2c2c2e);
+    color: #fff;
+}
+
+/* Dark mode navbar */
+body.dark header {
+    background: rgba(30,30,30,0.4);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+body.dark nav ul li a {
+    color: #f2f2f7;
+}
+
+body.dark nav ul li a:hover {
+    color: #0a84ff;
+}
+
+/* Dark mode hero text */
+body.dark .hero-text h3 {
+    color: #fbbf24;
+}
+
+body.dark .hero-text p {
+    color: #d1d1d6;
+}
+
+/* Dark Mode Liquid Glass Cards */
+body.dark .about-text {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-left ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle {
+    margin-left: 50px;
+}
+
+.nav-left {
+    margin-left: 40px; /* adjust this value */
+}
+
+#logo {
+    width: 120px;
+    height: auto;
+    filter: invert(0) brightness(0) contrast(1000%);
+    transition: 0.4s ease;
+}
+
+body.dark #logo {
+    filter: invert(1) brightness(1000%);
+}
+
+/* Overlay - fullscreen blurred background */
+#slideshow-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(15px) brightness(0.7);
+    background: rgba(255,255,255,0.2); /* soft glass */
+    display: none; /* hide by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: opacity 0.4s ease;
+}
+
+/* Glass container for logo */
+.glass-logo-container {
+    padding: 40px;
+    border-radius: 32px;
+    backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    animation: float 6s ease-in-out infinite alternate;
+}
+
+/* Logo inside glass */
+#logo-glass {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+/* Float animation */
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-14px); }
+}
+/* ------------------ CONTACT SECTION ------------------ */
+.contact {
+    min-height: 100vh;
+    padding: 120px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e5);
+}
+
+.contact-text h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.contact-text p {
+    font-size: 18px;
+    color: #6f6f73;
+    margin-bottom: 40px;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Form container with liquid glass effect */
+.contact-form-container {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(40px) saturate(180%);
+    border-radius: 32px;
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.12),
+                inset 0 1px 0 rgba(255,255,255,0.7);
+    padding: 40px;
+    animation: float 6s ease-in-out infinite alternate;
+}
+
+/* Form fields */
+.contact-form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.contact-form-container label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1c1c1e;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    padding: 12px 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: 16px;
+    outline: none;
+    transition: 0.25s ease;
+    background: rgba(255,255,255,0.6);
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+    border-color: #0a84ff;
+    background: rgba(255,255,255,0.8);
+}
+
+/* Submit button */
+.submit-btn {
+    padding: 14px 28px;
+    border-radius: 16px;
+    border: none;
+    background: #0a84ff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #006de1;
+}
+
+/* Dark mode for contact section */
+body.dark .contact {
+    background: linear-gradient(135deg, #1c1c1e, #2c2c2e);
+}
+
+body.dark .contact-text p,
+body.dark .contact-text h2 {
+    color: #fff;
+}
+
+body.dark .contact-form-container {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+
+body.dark .contact-form-container input,
+body.dark .contact-form-container textarea {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+}
+
+body.dark .contact-form-container input::placeholder,
+body.dark .contact-form-container textarea::placeholder {
+    color: #d1d1d6;
+}
+/* Dark mode for contact section */
+body.dark .contact {
+    background: linear-gradient(135deg, #1c1c1e, #2c2c2e);
+}
+
+body.dark .contact-text h2,
+body.dark .contact-text p {
+    color: #fff;
+}
+
+/* Glass form container in dark mode */
+body.dark .contact-form-container {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+
+/* Inputs and textarea */
+body.dark .contact-form-container input,
+body.dark .contact-form-container textarea {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff; /* text color */
+}
+
+/* Labels */
+body.dark .contact-form-container label {
+    color: #fff;
+}
+
+/* Placeholder text */
+body.dark .contact-form-container input::placeholder,
+body.dark .contact-form-container textarea::placeholder {
+    color: #d1d1d6;
+}
+          /* ------------------ CONTACT SECTION ------------------ */
+.contact {
+    min-height: 100vh;
+    padding: 120px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e5);
+}
+
+.contact-text h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.contact-text p {
+    font-size: 18px;
+    color: #6f6f73;
+    margin-bottom: 40px;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Form container with liquid glass effect */
+.contact-form-container {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(40px) saturate(180%);
+    border-radius: 32px;
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.12),
+                inset 0 1px 0 rgba(255,255,255,0.7);
+    padding: 40px;
+    animation: float 6s ease-in-out infinite alternate;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Form fields */
+.contact-form-container .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1c1c1e;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    padding: 12px 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: 16px;
+    outline: none;
+    transition: 0.25s ease;
+    background: rgba(255,255,255,0.6);
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+    border-color: #0a84ff;
+    background: rgba(255,255,255,0.8);
+}
+
+/* Submit button */
+.submit-btn {
+    padding: 14px 28px;
+    border-radius: 16px;
+    border: none;
+    background: #0a84ff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #006de1;
+}
+
+/* Social links */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.social-links p {
+    margin-bottom: 8px;
+    color: #1c1c1e;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #0a84ff;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #006de1;
+    text-decoration: underline;
+}
+
+/* Dark mode */
+body.dark .contact {
+    background: linear-gradient(135deg, #1c1c1e, #2c2c2e);
+}
+
+body.dark .contact-text h2,
+body.dark .contact-text p {
+    color: #fff;
+}
+
+body.dark .contact-form-container {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+
+body.dark .contact-form-container input,
+body.dark .contact-form-container textarea {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+}
+
+body.dark .contact-form-container input::placeholder,
+body.dark .contact-form-container textarea::placeholder {
+    color: #d1d1d6;
+}
+
+body.dark .contact-form-container label {
+    color: #fff;
+}
+
+body.dark .social-links p,
+body.dark .social-links a {
+    color: #fff;
+}
+  /* ------------------ CONTACT SECTION ------------------ */
+.contact {
+    min-height: 100vh;
+    padding: 120px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e5);
+}
+
+/* Two-column wrapper */
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Left: Enquiry form */
+.contact-form-container {
+    flex: 1 1 500px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(40px) saturate(180%);
+    border-radius: 32px;
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.12),
+                inset 0 1px 0 rgba(255,255,255,0.7);
+    padding: 40px;
+    animation: float 6s ease-in-out infinite alternate;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form-container h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #1c1c1e;
+}
+
+.contact-form-container .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #1c1c1e;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    padding: 12px 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: 16px;
+    outline: none;
+    transition: 0.25s ease;
+    background: rgba(255,255,255,0.6);
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+    border-color: #0a84ff;
+    background: rgba(255,255,255,0.8);
+}
+
+.submit-btn {
+    padding: 14px 28px;
+    border-radius: 16px;
+    border: none;
+    background: #0a84ff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #006de1;
+}
+
+/* Right: Social Handles */
+.contact-social-container {
+    flex: 1 1 300px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(40px) saturate(180%);
+    border-radius: 32px;
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.12),
+                inset 0 1px 0 rgba(255,255,255,0.7);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    animation: float 6s ease-in-out infinite alternate;
+}
+
+.contact-social-container h2 {
+    font-size: 32px;
+    color: #1c1c1e;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    color: #1c1c1e;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    backdrop-filter: blur(15px);
+}
+
+.social-icon:hover {
+    background: rgba(255,255,255,0.85);
+    transform: scale(1.1);
+}
+
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+/* CONTACT SECTION BASE STYLE */
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact-form-container,
+.contact-social-container {
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(25px);
+    border-radius: 28px;
+    padding: 40px;
+    flex: 1;
+    border: 1px solid rgba(255,255,255,0.6);
+}
+
+.contact-form-container h2,
+.contact-social-container h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.6);
+    color: #1c1c1e;
+}
+
+.submit-btn {
+    padding: 12px 22px;
+    border-radius: 14px;
+    background: #0a84ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/* DARK MODE CONTACT SECTION */
+body.dark .contact-form-container,
+body.dark .contact-social-container {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+body.dark .contact-form-container input,
+body.dark .contact-form-container textarea {
+    background: rgba(255,255,255,0.08);
+    color: #f2f2f7;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+body.dark .social-icons img {
+    filter: invert(1);
+}
+
+body.dark .submit-btn {
+    background: #0a84ff;
+    color: white;
+}
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.social-icons img {
+    width: 38px;
+    height: 38px;
+    transition: 0.25s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
+}
+/* ---- FIX CONTACT ICONS ---- */
+.contact-social-container img {
+    filter: none !important;
+}
+/* Only invert the header logo */
+body.dark header .logo img {
+    filter: invert(1) brightness(1000%) !important;
+}
+/* ---------------------- SERVICES SECTION ---------------------- */
+
+.services-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.services-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.services-subtitle {
+    font-size: 18px;
+    opacity: 0.6;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: rgba(255,255,255,0.5);
+    border-radius: 22px;
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,0.1);
+    backdrop-filter: blur(20px);
+    transition: 0.3s ease;
+}
+
+body.dark .service-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 18px;
+}

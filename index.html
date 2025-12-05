@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aswintr</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img id="logo" src="logo-light.svg" alt="signature logo">
+    </div>
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="theme-toggle">
+                <input type="checkbox" id="switch">
+                <label for="switch"></label>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="hero" id="hero">
+    <div class="hero-text">
+        <h3>Hello World</h3>
+        <h1>I'am Aswin TR</h1>
+        <h1>Civil Engineer & Web Developer</h1>
+        <p>Civil Engineering student & Multimedia enthusiast. Passionate about creating futuristic designs and aesthetic visuals.</p>
+        <div class="hero-buttons">
+            <a href="#about" class="more">More about me</a>
+            <a href="resume.pdf" class="cv">View my CV</a>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-text">
+        <h2>About Me.</h2>
+        <p>Civil Engineering student & Multimedia enthusiast. Passionate about creating futuristic designs and aesthetic visuals.</p>
+    </div>
+</section>
+
+<!-- ⭐ PREMIUM SERVICES SECTION INTEGRATED -->
+<section class="services" id="services">
+    <h2 class="services-title">Services</h2>
+
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-inner">
+                <h3>House Planning</h3>
+                <p>Custom house plans, modern layouts, nalukettu concepts & Vastu-aligned designs.</p>
+                <a href="booking.html" class="premium-btn">Book Now</a>
+
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-inner">
+                <h3>Interior Designing</h3>
+                <p>3D interiors, colour palette selection, furniture layouts & lighting concepts.</p>
+                <a href="booking.html" class="premium-btn">Book Now</a>
+
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-inner">
+                <h3>Photo Editing</h3>
+                <p>Professional retouching, cinematic tones, posters, album covers & more.</p>
+                <a href="booking.html" class="premium-btn">Book Now</a>
+
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-inner">
+                <h3>Video Editing</h3>
+                <p>Reels, cinematic edits, transitions, colour grading & storytelling videos.</p>
+                <a href="booking.html" class="premium-btn">Book Now</a>
+
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-inner">
+                <h3>Web Development</h3>
+                <p>Clean, fast, responsive websites with animations and premium UI.</p>
+                <a href="booking.html" class="premium-btn">Book Now</a>
+
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-inner">
+                <h3>App Development</h3>
+                <p>Modern, minimal Android apps with AI features, tracking systems & more.</p>
+                <a href="booking.html" class="premium-btn">Book Now</a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="contact-wrapper">
+        <div class="contact-form-container">
+            <h2>Send an Enquiry</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Enquiry</button>
+            </form>
+        </div>
+
+        <div class="contact-social-container">
+            <h2>Connect with Me</h2>
+            <div class="social-icons">
+                <a href="https://instagram.com/aswin_sonuzz" class="social-icon insta"><img src="icons/instagram.svg" alt="Instagram"></a>
+                <a href="https://linkedin.com/in/aswin-tr-835040392" class="social-icon linkedin"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="https://github.com/AswinSonuz" class="social-icon github"><img src="icons/github.svg" alt="GitHub"></a>
+                <a href="mailto:traswin300@gmail.com" class="social-icon mail"><img src="icons/mail.svg" alt="Email"></a>
+                <a href="https://wa.me/919895360056" class="social-icon whatsapp"><img src="icons/whatsapp.svg" alt="WhatsApp"></a>
+                <a href="https://www.snapchat.com/add/aswin_sonuzz10" class="social-icon snapchat"><img src="icons/Snapchat.svg" alt="Snapchat"></a>
+                <a href="https://t.me/YOURUSERNAME" class="social-icon telegram"><img src="icons/telegram.svg" alt="Telegram"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const toggle = document.getElementById("switch");
+
+    toggle.addEventListener("change", () => {
+        document.body.classList.toggle("dark");
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    });
+
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+        toggle.checked = true;
+    }
+</script>
+
+<div id="slideshow-overlay">
+    <div class="glass-logo-container">
+        <img id="logo-glass" src="logo-light.svg" alt="Logo">
+    </div>
+</div>
+
+</body>
+</html>
