@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodaikanal | Travel Journal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo-light.svg" alt="logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="journey.html">← Back</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="journal-header" data-aos="fade-down">
+    <h1 style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 3rem; margin-bottom: 10px;">Kodaikanal</h1>
+    <p style="font-size: 1.1rem; opacity: 0.7;">Jan 2026 • Princess of Hill Stations</p>
+</div>
+
+<div class="pinterest-layout">
+    
+    <!-- Pin 1: Main Image -->
+    <div class="pin" data-aos="fade-up">
+        <div class="journal-stamp">JAN 26</div>
+        <img src="Kodaikanal.jpeg" alt="Kodaikanal Lake">
+    </div>
+
+    <!-- Pin 2: Text Note -->
+    <div class="pin" data-aos="fade-up" data-aos-delay="100">
+        <div class="pin-content">
+            <h3 class="pin-title">Lake View</h3>
+            <p class="pin-text">The serenity of the lake in the early morning is unmatched. Cycling around the water, feeling the cold breeze.</p>
+        </div>
+    </div>
+
+    <!-- Pin: Ticket Stub -->
+    <div class="journal-ticket" data-aos="fade-up" data-aos-delay="150">
+        <div class="ticket-top">ENTRY PASS</div>
+        <div class="pin-content" style="text-align: center;">
+            <h3 class="pin-title" style="margin: 0;">Pine Forest</h3>
+            <p class="pin-text">Adult: 1</p>
+            <div class="ticket-barcode"></div>
+        </div>
+    </div>
+
+    <!-- Pin 3: Image -->
+    <div class="pin" data-aos="fade-up" data-aos-delay="200">
+        <img src="Kodaikanal.jpeg" style="height: 400px; object-fit: cover;" alt="Pine Forest">
+        <div class="pin-content">
+            <p class="pin-text">Lost in the pine forests.</p>
+        </div>
+    </div>
+
+    <!-- Pin 4: Quote Card -->
+    <div class="pin quote-pin" data-aos="fade-up" data-aos-delay="150">
+        <div class="pin-content">
+            <h3 class="pin-title">"Cold Breeze"</h3>
+            <p class="pin-text" style="opacity: 0.9;">Warm coffee and cold winds.</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+    }
+</script>
+
+</body>
+</html>

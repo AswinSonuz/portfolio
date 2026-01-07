@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fitness | Aswin TR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo-light.svg" alt="logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">← Back</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="journals">
+    <h1 class="journals-title">Fitness</h1>
+    <p class="journals-subtitle">Strength, Endurance, and Discipline.</p>
+
+    <div style="max-width: 800px; margin: 40px auto; text-align: center; padding: 40px; background: rgba(255,255,255,0.1); border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+        <h2 style="margin-bottom: 20px;">My Fitness Journey</h2>
+        <p style="line-height: 1.6; opacity: 0.9;">
+            Welcome to my fitness page. Here I document my workouts, progress, and health tips. 
+            Staying fit is not just about the body, but also the mind.
+        </p>
+        <br>
+        <p><em>Content coming soon...</em></p>
+    </div>
+</section>
+
+<script>
+    // Apply theme based on local storage
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+    }
+</script>
+
+</body>
+</html>

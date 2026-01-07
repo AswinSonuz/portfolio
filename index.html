@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aswintr</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -18,7 +20,8 @@
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#works">Works</a></li>
+                <li><a href="#works.html" class="nav-journal-btn">Works</a></li>
+                <li><a href="journey.html" class="nav-journal-btn">Travel Journals</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -32,20 +35,24 @@
 </header>
 
 <section class="hero" id="hero">
-    <div class="hero-text">
-        <h3>Hello World</h3>
-        <h1>I'am Aswin TR</h1>
-        <h1>Civil Engineer & Web Developer</h1>
-        <p>Civil Engineering student & Multimedia enthusiast. Passionate about creating futuristic designs and aesthetic visuals.</p>
-        <div class="hero-buttons">
+    <div class="hero-text" data-aos="fade-up">
+        <h3 data-aos="fade-up" data-aos-delay="100">Hello World</h3>
+        <h1 data-aos="fade-up" data-aos-delay="200">I'm Aswin TR</h1>
+        <h1 data-aos="fade-up" data-aos-delay="300">Civil Engineer & Web Developer</h1>
+        <p data-aos="fade-up" data-aos-delay="400">Civil Engineering student & Multimedia enthusiast. Passionate about creating futuristic designs and aesthetic visuals.</p>
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
             <a href="#about" class="more">More about me</a>
             <a href="resume1.pdf" class="cv">View my CV</a>
         </div>
     </div>
+    <div class="hero-image" data-aos="fade-left" data-aos-delay="600">
+        <div class="hero-glow"></div>
+        <img src="IMGSELF.png" alt="Aswin TR">
+    </div>
 </section>
 
 <section class="about" id="about">
-    <div class="about-text">
+    <div class="about-text" data-aos="fade-right">
         <h2>About Me.</h2>
         <p>Civil Engineering student & Multimedia enthusiast. Passionate about creating futuristic designs and aesthetic visuals.</p>
     </div>
@@ -53,12 +60,12 @@
 
 <!-- ⭐ PREMIUM SERVICES SECTION INTEGRATED -->
 <section class="services" id="services">
-    <div class="services-container">
-        <h2 class="services-title">Services</h2>
-        <p class="services-subtitle">Explore my expertise and elevate your project</p>
+    <div class="services-container" data-aos="fade-up">
+        <h2 class="services-title" data-aos="fade-down">Services</h2>
+        <p class="services-subtitle" data-aos="fade-down" data-aos-delay="100">Explore my expertise and elevate your project</p>
 
         <div class="services-grid">
-            <div class="service-card" style="--card-index: 0;">
+            <div class="service-card" style="--card-index: 0;" data-aos="zoom-in" data-aos-delay="100">
                 <div class="card-icon">🏗️</div>
                 <div class="service-inner">
                     <h3>House Planning</h3>
@@ -67,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="service-card" style="--card-index: 1;">
+            <div class="service-card" style="--card-index: 1;" data-aos="zoom-in" data-aos-delay="200">
                 <div class="card-icon">🛋️</div>
                 <div class="service-inner">
                     <h3>Interior Designing</h3>
@@ -76,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="service-card" style="--card-index: 2;">
+            <div class="service-card" style="--card-index: 2;" data-aos="zoom-in" data-aos-delay="300">
                 <div class="card-icon">📸</div>
                 <div class="service-inner">
                     <h3>Photo Editing</h3>
@@ -85,7 +92,7 @@
                 </div>
             </div>
 
-            <div class="service-card" style="--card-index: 3;">
+            <div class="service-card" style="--card-index: 3;" data-aos="zoom-in" data-aos-delay="400">
                 <div class="card-icon">🎬</div>
                 <div class="service-inner">
                     <h3>Video Editing</h3>
@@ -94,7 +101,7 @@
                 </div>
             </div>
 
-            <div class="service-card" style="--card-index: 4;">
+            <div class="service-card" style="--card-index: 4;" data-aos="zoom-in" data-aos-delay="500">
                 <div class="card-icon">💻</div>
                 <div class="service-inner">
                     <h3>Web Development</h3>
@@ -103,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="service-card" style="--card-index: 5;">
+            <div class="service-card" style="--card-index: 5;" data-aos="zoom-in" data-aos-delay="600">
                 <div class="card-icon">📱</div>
                 <div class="service-inner">
                     <h3>App Development</h3>
@@ -115,9 +122,22 @@
     </div>
 </section>
 
+<section class="" data-aos="fade-up">
+    <h2>My Travel Journals</h2>
+    <p>Places I visited, moments I captured, and stories worth remembering.</p>
+    <a href="journey.html" class="premium-btn" style="width: auto; display: inline-block; margin-top: 20px;" aria-label="Explore Travel Journals">Explore Journals &rarr;</a>
+</section>
+
+<section class="journal-cta" data-aos="fade-up">
+    <h2>My Travel Journals</h2>
+    <p>Places I visited, moments I captured, and stories worth remembering.</p>
+    <a href="journey.html" class="premium-btn" style="width: auto; display: inline-block; margin-top: 20px;" aria-label="Explore Travel Journals">Explore Journals &rarr;</a>
+</section>
+
+
 <section class="contact" id="contact">
-    <div class="contact-wrapper">
-        <div class="contact-form-container">
+    <div class="contact-wrapper" data-aos="fade-up">
+        <div class="contact-form-container" data-aos="fade-right">
             <h2>Send an Enquiry</h2>
             <form id="contact-form">
                 <div class="form-group">
@@ -140,7 +160,7 @@
             </form>
         </div>
 
-        <div class="contact-social-container">
+        <div class="contact-social-container" data-aos="fade-left">
             <h2>Connect with Me</h2>
             <div class="social-icons">
                 <a href="https://instagram.com/aswin_sonuzz" class="social-icon insta"><img src="icon/instagram.svg" alt="Instagram"></a>
@@ -155,7 +175,47 @@
     </div>
 </section>
 
+<footer class="premium-footer">
+    <div class="footer-content">
+        <p>&copy; 2024 Aswin TR. All Rights Reserved.</p>
+        <div class="update-badge">
+            <span class="update-icon">⚡</span>
+            <span>Website Last Updated: <span id="update-date">Loading...</span></span>
+        </div>
+    </div>
+</footer>
+
+<!-- Side Menu & Overlay -->
+<div id="menu-overlay" class="menu-overlay"></div>
+<aside id="side-menu" class="side-menu">
+    <div class="side-menu-header">
+        <h3 class="menu-title">Menu</h3>
+        <button class="close-btn" aria-label="Close Menu">&times;</button>
+    </div>
+    <div class="side-menu-links">
+        <a href="#hero" class="menu-link">Home</a>
+        <a href="#about" class="menu-link">About</a>
+        <a href="#services" class="menu-link">Services</a>
+        <a href="#works" class="menu-link">Works</a>
+        <a href="journey.html" class="menu-link">Travel Journals</a>
+        <a href="fitness.html" class="menu-link">Fitness</a>
+        <a href="#contact" class="menu-link">Contact</a>
+    </div>
+</aside>
+
+<div id="slideshow-overlay">
+    <div class="glass-logo-container">
+        <img id="logo-glass" src="logo-light.svg" alt="Logo">
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+    AOS.init({
+        duration: 800,
+        once: true,
+    });
+
     const toggle = document.getElementById("switch");
 
     toggle.addEventListener("change", () => {
@@ -171,14 +231,40 @@
         document.body.classList.add("dark");
         toggle.checked = true;
     }
-</script>
 
-<div id="slideshow-overlay">
-    <div class="glass-logo-container">
-        <img id="logo-glass" src="logo-light.svg" alt="Logo">
-    </div>
-</div>
+    // Automatic Date Update Script
+    const dateElement = document.getElementById('update-date');
+    if (dateElement) {
+        const lastModified = new Date(document.lastModified);
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = lastModified.toLocaleDateString('en-US', options);
+    }
+
+    // Side Menu Logic
+    const logo = document.getElementById('logo');
+    const sideMenu = document.getElementById('side-menu');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const closeBtn = document.querySelector('.close-btn');
+    const menuLinks = document.querySelectorAll('.menu-link');
+
+    function openMenu() {
+        sideMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+    }
+
+    function closeMenu() {
+        sideMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+    }
+
+    if(logo) logo.addEventListener('click', openMenu);
+    if(closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if(menuOverlay) menuOverlay.addEventListener('click', closeMenu);
+    
+    menuLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+</script>
 
 </body>
 </html>
-

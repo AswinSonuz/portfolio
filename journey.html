@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Travel Journals | Aswin TR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo-light.svg" alt="logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">← Back</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="journals">
+    <h1 class="journals-title">Travel Journals</h1>
+    <p class="journals-subtitle">Places I visited. Moments that stayed.</p>
+
+    <div class="journal-grid">
+
+        <!-- Journal Card -->
+        <a href="journal-thanjavur.html" class="journal-link">
+    <div class="journal-card">
+        <img src="Thanj.jpg" alt="Thanjavur" loading="lazy">
+        <div class="journal-content">
+            <span class="journal-date">Dec 2025</span>
+            <h3>Thanjavur</h3>
+            <p>
+                Nights, architecture, calm walks, and a city that
+                made me slow down and observe.
+            </p>
+        </div>
+    </div>
+</a>
+
+
+        <a href="journal-munnar.html" class="journal-link">
+        <div class="journal-card">
+            <img src="Munnar.png" alt="Munnar">
+            <div class="journal-content">
+                <span class="journal-date">Jan 2026</span>
+                <h3>Munnar</h3>
+                <p>
+                    Familiar roads, deeper perspectives, and
+                    moments that felt personal.
+                </p>
+            </div>
+        </div>
+        </a>
+
+         <a href="journal-kodaikanal.html" class="journal-link">
+         <div class="journal-card">
+            <img src="Kodaikanal.jpeg" alt="Kodaikanal">
+            <div class="journal-content">
+                <span class="journal-date">Jan 2026</span>
+                <h3>Kodaikanal</h3>
+                <p>
+                    Familiar roads, deeper perspectives, and
+                    moments that felt personal.
+                </p>
+            </div>
+        </div>
+        </a>
+
+        <!-- Add more cards by copying this block -->
+
+    </div>
+</section>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+    }
+</script>
+
+</body>
+</html>
