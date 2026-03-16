@@ -13,6 +13,7 @@ html {
 /* ========== UNIFIED COLOR SCHEME ========== */
 body {
     background: linear-gradient(135deg, #fdf4e3, #ebd6b7); /* Warm Sandal */
+    background: linear-gradient(135deg, #fafafa, #eaeaea); /* Off-white */
     min-height: 100vh;
     color: #1c1c1e;
     transition: background 0.4s ease, color 0.4s ease;
@@ -283,6 +284,7 @@ body.dark .status-indicator {
     background: 
         radial-gradient(circle at top left, rgba(155, 81, 224, 0.15), transparent 60%),
         radial-gradient(circle at bottom right, rgba(235, 210, 180, 0.5), transparent 70%);
+        radial-gradient(circle at bottom right, rgba(220, 220, 225, 0.5), transparent 70%);
 }
 
 .hero-text h3 {
@@ -326,6 +328,7 @@ body.dark .status-indicator {
 body.dark .more {
     background: #ff3b30;
     color: #fdf8f0;
+    color: #fafafa;
 }
 
 body.dark .more:hover {
