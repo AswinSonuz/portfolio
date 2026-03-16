@@ -84,6 +84,18 @@
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark");
     }
+
+    // Journal Cards Liquid Glass Cursor Effect
+    const journalCards = document.querySelectorAll('.journal-card');
+    journalCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
 </script>
 
 </body>

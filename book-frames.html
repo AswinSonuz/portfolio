@@ -1,0 +1,140 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Frame</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 40px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.3);
+            border-left: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.05);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            border: none;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            outline: none;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .premium-btn {
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #000000, #2c2c2c);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25),
+                        inset 0 1px 0 rgba(255,255,255,0.1);
+            transition: 0.25s;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .premium-btn:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #181818, #353535);
+        }
+
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-link:hover { color: #fff; }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <h1>Order Custom Frames</h1>
+
+        <form action="https://formsubmit.co/traswin300doc@gmail.com" method="POST">
+
+            <label>Your Name</label>
+            <input type="text" name="name" required>
+
+            <label>Your Email</label>
+            <input type="email" name="email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" name="phone" required>
+
+            <label>Frame Size</label>
+            <select name="size" required>
+                <option value="">-- Select Size --</option>
+                <option>A4 (21 x 30 cm)</option>
+                <option>A3 (30 x 42 cm)</option>
+                <option>12 x 18 inches</option>
+                <option>Custom (Specify below)</option>
+            </select>
+            
+            <label>Frame Type</label>
+            <select name="type" required>
+                <option value="">-- Select Type --</option>
+                <option>Black Matte</option>
+                <option>White</option>
+                <option>Natural Wood</option>
+                <option>Synthetic</option>
+            </select>
+
+            <label>Delivery Address</label>
+            <textarea name="address" style="height: 80px;" placeholder="Enter full address..." required></textarea>
+
+            <label>Additional Details</label>
+            <textarea name="details" placeholder="Any specific requirements..."></textarea>
+
+            <button type="submit" class="premium-btn">Place Order Request</button>
+        </form>
+    </div>
+
+</body>
+</html>

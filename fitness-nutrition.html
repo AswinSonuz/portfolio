@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutrition | Fitness</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo-light.svg" alt="logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="fitness.html">← Back</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="fitness-hero" style="min-height: 50vh;">
+    <div class="fitness-hero-content" data-aos="zoom-in">
+        <h1>FUEL &<br>RECOVERY</h1>
+        <p>You can't out-train a bad diet.</p>
+    </div>
+</section>
+
+<section class="fitness-content">
+    <div style="max-width: 900px; margin: 0 auto;">
+        
+        <div class="glass-panel" data-aos="fade-up">
+            <h2 style="margin-bottom: 20px; font-family: 'Orbitron', sans-serif;">Daily Targets</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; text-align: center;">
+                <div>
+                    <h3 style="color: #0a84ff; font-size: 2rem;">3000</h3>
+                    <p>Calories</p>
+                </div>
+                <div>
+                    <h3 style="color: #30d158; font-size: 2rem;">180g</h3>
+                    <p>Protein</p>
+                </div>
+                <div>
+                    <h3 style="color: #ff9f0a; font-size: 2rem;">350g</h3>
+                    <p>Carbs</p>
+                </div>
+                <div>
+                    <h3 style="color: #ff453a; font-size: 2rem;">80g</h3>
+                    <p>Fats</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration: 800, once: true}); if(localStorage.getItem("theme")==="dark"){document.body.classList.add("dark");}</script>
+</body>
+</html>
